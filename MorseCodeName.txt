@@ -1,0 +1,92 @@
+int led1 = D0;
+int led2 = D7; 
+
+void blinkDelay()
+  {
+    digitalWrite(led1, LOW);
+    digitalWrite(led2, LOW);
+    delay(100);
+  }
+
+void endLetter()
+  {
+    digitalWrite(led1, LOW);
+    digitalWrite(led2, LOW);
+    delay(700);
+  }
+
+void blinkDot()
+  {
+    digitalWrite(led1, HIGH);
+    digitalWrite(led2, HIGH);
+    delay(100);
+  }
+  
+void blinkDash()
+  {
+    digitalWrite(led1, HIGH);
+    digitalWrite(led2, HIGH);
+    delay(300);
+  }
+  
+void letterC()
+{
+    blinkDash();
+    blinkDelay();
+    blinkDot();
+    blinkDelay();
+    blinkDash();
+    blinkDelay();
+    blinkDot();
+    blinkDelay();
+}
+
+void letterO()
+{
+    blinkDash();
+    blinkDelay();
+    blinkDash();
+    blinkDelay();
+    blinkDash();
+    blinkDelay();
+}
+
+void letterN()
+{
+    blinkDash();
+    blinkDelay();
+    blinkDot();
+    blinkDelay();
+}
+
+void letterR()
+{
+    blinkDot();
+    blinkDelay();
+    blinkDash();
+    blinkDelay();
+    blinkDot();
+    blinkDelay();
+}
+
+void setup() {
+
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+}
+
+void loop() {
+
+letterC();
+endLetter();
+letterO();
+endLetter();
+letterN();
+endLetter();
+letterN();
+endLetter();
+letterO();
+endLetter();
+letterR();
+endLetter();
+}
